@@ -44,6 +44,7 @@ namespace Zad3.Pages
                     output = "Otrzymano: " + output;
 
                 HttpContext.Session.SetString("BuzzFizz", output);
+                HttpContext.Session.SetString("Data", DateTime.Now.ToString());
                 return RedirectToPage("./Szukane");
             }
             return Page();

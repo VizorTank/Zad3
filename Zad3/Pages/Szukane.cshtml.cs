@@ -12,9 +12,11 @@ namespace Zad3.Pages
     public class SzukaneModel : PageModel
     {
         public String BuzzFizz { get; set; }
+        public String Data  { get; set; }
         public void OnGet()
         {
             BuzzFizz = HttpContext.Session.GetString("BuzzFizz");
+            Data = HttpContext.Session.GetString("Data");
         }
     }
 }
