@@ -2,5 +2,15 @@
 @model Zad3.Pages.SzukaneModel
 @{
 }
-@Model.BuzzFizz <br/>
-@Model.Data
+@foreach (var item in Model.BF)
+{
+
+    <p>Nr: @{ Model.a++; }@Model.a Dane: @item.ToString() Data: @item.date</p>
+    @if (item.historical == false)
+    {
+        <form method="post">
+            @Html.Hidden("itemId", item.Id)
+            <button type="submit" class="btn btn-primary">Zatwierdź</button><br />
+        </form>
+    }
+}
