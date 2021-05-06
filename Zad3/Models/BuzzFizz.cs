@@ -16,6 +16,14 @@ namespace Zad3.Models
         public string date { get; set; }
         [Required]
         public bool historical { get; set; }
+        public string userId { get; set; }
+        public BuzzFizz(int n, string user)
+        {
+            number = n;
+            userId = user;
+            date = DateTime.Now.ToString();
+            historical = false;
+        }
         public BuzzFizz(int n)
         {
             number = n;

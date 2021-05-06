@@ -3,12 +3,11 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
 <div class="text-center">
     <form method="post">
         <label asp-for="BuzzFizzNumber"></label>
         <input asp-for="BuzzFizzNumber" />
-        <button type="submit" class="btn btn-primary">Zatwierdź</button><br/>
+        <button type="submit" class="btn btn-primary">Zatwierdź</button><br />
         <span asp-validation-for="BuzzFizzNumber" class="text-danger"></span>
     </form>
 </div>

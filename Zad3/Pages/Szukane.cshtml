@@ -6,11 +6,12 @@
 {
 
     <p>Nr: @{ Model.a++; }@Model.a Dane: @item.ToString() Data: @item.date</p>
-    @if (item.historical == false)
+    @if (item.historical == false && item.userId == Model.GetUserId())
     {
         <form method="post">
             @Html.Hidden("itemId", item.Id)
-            <button type="submit" class="btn btn-primary">Zatwierdź</button><br />
+            @Html.Hidden("userId", item.userId)
+            <button type="submit" class="btn btn-primary">Usuń</button><br />
         </form>
     }
 }

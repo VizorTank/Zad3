@@ -5,11 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Zad3.Models;
 
+
 namespace Zad3.Data
 {
     public class BuzzFizzContext : DbContext
     {
-        public BuzzFizzContext(DbContextOptions options) : base(options) { }
+        public BuzzFizzContext(DbContextOptions<BuzzFizzContext> options) : base(options) { }
         public DbSet<BuzzFizz> BuzzFizz { get; set; }
     }
 }
